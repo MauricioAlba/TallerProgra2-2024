@@ -60,7 +60,7 @@ public class panel_salas extends javax.swing.JPanel {
         txtTitulo.setText("Gestión De Laboratorios");
         add(txtTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 340, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/inicio/Rectangle 71.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/samuel/Rectangle 71.png"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -73,7 +73,7 @@ public class panel_salas extends javax.swing.JPanel {
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 90, 30));
 
         imgAgregar.setBackground(new java.awt.Color(255, 255, 255));
-        imgAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/inicio/nuevaSala.png"))); // NOI18N
+        imgAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/samuel/nuevaSala.png"))); // NOI18N
         imgAgregar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 imgAgregarMousePressed(evt);
@@ -92,7 +92,7 @@ public class panel_salas extends javax.swing.JPanel {
         jLabel5.setText("Ver Salas");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 90, 20));
 
-        imgSalas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/inicio/verSalas.png"))); // NOI18N
+        imgSalas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/samuel/verSalas.png"))); // NOI18N
         imgSalas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 imgSalasMousePressed(evt);
