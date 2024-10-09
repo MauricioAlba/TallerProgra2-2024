@@ -126,7 +126,7 @@ public class layout_salas extends javax.swing.JFrame {
         jpLista.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 69, 398, 244));
 
         recharge.setBackground(new java.awt.Color(255, 255, 255));
-        recharge.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/reload.png"))); // NOI18N
+        recharge.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/samuel/reload.png"))); // NOI18N
         recharge.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 rechargeMouseClicked(evt);

@@ -56,12 +56,12 @@ public class panel_inicio extends javax.swing.JPanel {
         txtVerReservas.setText("Ver Reservas");
         add(txtVerReservas, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, 90, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/inicio/Rectangle 71.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/samuel/Rectangle 71.png"))); // NOI18N
         jLabel1.setMaximumSize(new java.awt.Dimension(520, 400));
         jLabel1.setMinimumSize(new java.awt.Dimension(520, 400));
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        img_reserva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/inicio/reserva.png"))); // NOI18N
+        img_reserva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/samuel/reserva.png"))); // NOI18N
         img_reserva.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 img_reservaMouseClicked(evt);
@@ -69,7 +69,7 @@ public class panel_inicio extends javax.swing.JPanel {
         });
         add(img_reserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, -1, -1));
 
-        img_verReservas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/inicio/verHorarios.png"))); // NOI18N
+        img_verReservas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/samuel/verHorarios.png"))); // NOI18N
         add(img_verReservas, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
