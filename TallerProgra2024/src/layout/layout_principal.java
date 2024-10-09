@@ -111,7 +111,9 @@ public class layout_principal extends javax.swing.JFrame {
         jPanel1.add(panelContent, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 510, 390));
         panelContent.getAccessibleContext().setAccessibleParent(jPanel1);
 
-        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Files/Inicio.png"))); // NOI18N
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/samuel/Inicio.png"))); // NOI18N
+        Fondo.setPreferredSize(new java.awt.Dimension(720, 512));
+        Fondo.setRequestFocusEnabled(false);
         jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 520));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
