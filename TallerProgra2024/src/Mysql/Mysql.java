@@ -3,23 +3,36 @@ package Mysql;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 public class Mysql {
 
     public static Connection getConnection() {
-        Connection cn = null;
+        Connection link = null;
+        
         try {
-
-            Class.forName("com.mysql.jdbc.Driver");//puede cambiar 
-            cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/datosdeprogra", "root", "");
-            //JOptionPane.showMessageDialog(null, "conexion exitosa");
-            System.out.println("Conexion exitosa");
+            Class.forName("org.gjt.mm.mysql.Driver");
+            link = DriverManager.getConnection("jdbc:mysql://LocalHost:3307/umss_gestor", "root", "");
         } catch (SQLException e) {
-            System.out.println("Error: " + e.getMessage());
-            //JOptionPane.showMessageDialog(null, "ingreso datos");
-        } catch (Exception e1) {
-            System.out.println("Error: " + e1.getMessage());
+            System.out.println("Error: " + e.getMessage());   
+        } catch (Exception e) {
+            JOptionPane.showConfirmDialog(null, e);
         }
-        return cn;
+        return link;
+    }
+       
+    
+     public static Connection conectar(){
+            Connection link = null;
+        
+        try {
+            Class.forName("org.gjt.mm.mysql.Driver");
+            link = DriverManager.getConnection("jdbc:mysql://LocalHost:3307/umss_gestor", "root", "");
+        } catch (SQLException e) {
+            System.out.println("Error: " + e.getMessage());   
+        } catch (Exception e) {
+            JOptionPane.showConfirmDialog(null, e);
+        }
+        return link;
     }
 }
