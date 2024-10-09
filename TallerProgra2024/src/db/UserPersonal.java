@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author albam
+ * @author lenovo
  */
 public class UserPersonal {
     Mysql connect = new Mysql();

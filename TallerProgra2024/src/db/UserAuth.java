@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author albam
+ * @author lenovo
  */
 public class UserAuth {
     Mysql connect = new Mysql();
