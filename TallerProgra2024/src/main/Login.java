@@ -21,7 +21,7 @@ public class Login extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         Mysql db = new Mysql();
-        Connection link = db.getConnection();
+        Connection link = Mysql.conectar();
     }
 
     /**

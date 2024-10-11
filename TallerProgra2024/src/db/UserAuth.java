@@ -38,7 +38,7 @@ public class UserAuth {
             }
 
             if (band == 1) {
-                JOptionPane.showMessageDialog(null, "Bienvenido otra vez ");
+                //JOptionPane.showMessageDialog(null, "Bienvenido otra vez ");
                 return userId;
             } else {
                 JOptionPane.showMessageDialog(null, "CODIGO O CONTRASEÑA INCORRECTOS",
