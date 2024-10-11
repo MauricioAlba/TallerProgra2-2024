@@ -10,7 +10,7 @@ import java.sql.Connection;
 
 /**
  *
- * @author albam
+ * @author lenovo
  */
 public class Login extends javax.swing.JFrame {
 
@@ -21,7 +21,7 @@ public class Login extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         Mysql db = new Mysql();
-        Connection con = db.getConnection();
+        Connection link = Mysql.conectar();
     }
 
     /**
@@ -56,7 +56,7 @@ public class Login extends javax.swing.JFrame {
                 jLabel4MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 560, 160, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 552, 220, 40));
 
         jPasswordField1.setForeground(new java.awt.Color(151, 147, 147));
         jPasswordField1.setText("jPasswordField1");
