@@ -6,6 +6,7 @@ package main;
 
 import Mysql.Mysql;
 import db.UserAuth;
+import java.awt.Color;
 import java.sql.Connection;
 
 /**
@@ -59,14 +60,24 @@ public class Login extends javax.swing.JFrame {
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 552, 220, 40));
 
         jPasswordField1.setForeground(new java.awt.Color(151, 147, 147));
-        jPasswordField1.setText("jPasswordField1");
+        jPasswordField1.setText("********");
         jPasswordField1.setBorder(null);
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 510, 160, -1));
+        jPasswordField1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPasswordField1MousePressed(evt);
+            }
+        });
+        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 510, 200, 20));
 
         jTextField1.setForeground(new java.awt.Color(151, 147, 147));
         jTextField1.setText("Usuario");
         jTextField1.setToolTipText("");
         jTextField1.setBorder(null);
+        jTextField1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jTextField1MousePressed(evt);
+            }
+        });
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -112,6 +123,30 @@ public class Login extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void jTextField1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MousePressed
+        if (jTextField1.getText().equals("Usuario")){
+        jTextField1.setText("");
+        jTextField1.setForeground(Color.BLACK);
+        }
+        if (String.valueOf(jPasswordField1.getPassword()).isEmpty()){
+        jPasswordField1.setText("********");
+        jPasswordField1.setForeground(Color.GRAY);
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1MousePressed
+
+    private void jPasswordField1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordField1MousePressed
+        if (String.valueOf(jPasswordField1.getPassword()).equals("********")){
+        jPasswordField1.setText("");
+        jPasswordField1.setForeground(Color.BLACK);
+        }
+        if (jTextField1.getText().isEmpty()){
+        jTextField1.setText("Usuario");
+        jTextField1.setForeground(Color.GRAY);
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField1MousePressed
 
     /**
      * @param args the command line arguments

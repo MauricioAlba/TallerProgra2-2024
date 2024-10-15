@@ -5,16 +5,22 @@
 package main;
 
 import db.UserPersonal;
+import java.awt.BorderLayout;
+import java.awt.CardLayout;
+import java.awt.Color;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
  * @author lenovo
  */
 public class Inicio extends javax.swing.JFrame {
-
+    CardLayout cardLayout; //añadido
     /**
      * Creates new form Inicio
      */
+    
     public Inicio(int userId) {
         this.setUndecorated(true);
         initComponents();
@@ -30,7 +36,8 @@ public class Inicio extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         jLabel7.setText("user");
-        jLabel6.setText("Administrador");      
+        jLabel6.setText("Administrador");  
+        //iniciarComponentes();
     }
 
     /**
@@ -59,6 +66,7 @@ public class Inicio extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        fondoBlanco = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -192,6 +200,21 @@ public class Inicio extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, 460, 430));
 
+        fondoBlanco.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout fondoBlancoLayout = new javax.swing.GroupLayout(fondoBlanco);
+        fondoBlanco.setLayout(fondoBlancoLayout);
+        fondoBlancoLayout.setHorizontalGroup(
+            fondoBlancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 700, Short.MAX_VALUE)
+        );
+        fondoBlancoLayout.setVerticalGroup(
+            fondoBlancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 540, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(fondoBlanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, 700, 540));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -222,6 +245,9 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel10MouseClicked
 
     private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+        panelAsistencia p1 = new panelAsistencia();// a;adi
+        ShowPanel(p1);
+        jLabel11.setForeground(Color.GRAY);
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel11MouseClicked
 
@@ -240,7 +266,27 @@ public class Inicio extends javax.swing.JFrame {
     private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel15MouseClicked
-
+    /*public void changeState(JPanel p, String name){
+     try{
+       
+        fondoBlanco.add(p,name);
+        cardLayout.show(fondoBlanco, name);
+       
+        }catch(Exception e){
+        JOptionPane.showConfirmDialog(fondoBlanco, e);
+        }
+    }*/
+    private void ShowPanel(JPanel p){
+        p.setSize(700, 540);
+        p.setLocation(0, 0);
+        
+        fondoBlanco.removeAll();
+        fondoBlanco.add(p,BorderLayout.CENTER);
+        fondoBlanco.revalidate();
+        fondoBlanco.repaint();
+            
+    
+    }
     /**
      * @param args the command line arguments
      */
@@ -275,8 +321,15 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
     }
+    /*private void iniciarComponentes() {
+        cardLayout = new CardLayout();
+     fondoBlanco.setLayout(cardLayout);
+        setLocationRelativeTo(null);
+        setResizable(false)
+    }*/
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel fondoBlanco;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
