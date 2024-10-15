@@ -12,6 +12,7 @@ import java.time.format.DateTimeFormatter;
  * @author lenovo
  */
 public class panelAsistencia extends javax.swing.JPanel {
+    private RegistroAsis registroAsistenciaFrame;
 
     /**
      * Creates new form panelAsistencia
@@ -148,7 +149,12 @@ public class panelAsistencia extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
-     
+        if (registroAsistenciaFrame == null || !registroAsistenciaFrame.isVisible()) {
+            registroAsistenciaFrame = new RegistroAsis();
+            registroAsistenciaFrame.setVisible(true);
+        } else {
+            registroAsistenciaFrame.toFront();
+        }
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked

@@ -16,7 +16,7 @@ import javax.swing.JPanel;
  * @author lenovo
  */
 public class Inicio extends javax.swing.JFrame {
-    CardLayout cardLayout; //añadido
+    
     /**
      * Creates new form Inicio
      */
@@ -50,6 +50,7 @@ public class Inicio extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -63,7 +64,6 @@ public class Inicio extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         fondoBlanco = new javax.swing.JPanel();
@@ -72,6 +72,9 @@ public class Inicio extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/parte superior Dpto.png"))); // NOI18N
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, -1));
 
         jLabel10.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
@@ -179,9 +182,6 @@ public class Inicio extends javax.swing.JFrame {
         });
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 170, 50, 50));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/parte superior Dpto.png"))); // NOI18N
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, -1));
-
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lateral.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 300, 550));
 
@@ -210,10 +210,10 @@ public class Inicio extends javax.swing.JFrame {
         );
         fondoBlancoLayout.setVerticalGroup(
             fondoBlancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 540, Short.MAX_VALUE)
+            .addGap(0, 550, Short.MAX_VALUE)
         );
 
-        jPanel1.add(fondoBlanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, 700, 540));
+        jPanel1.add(fondoBlanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 700, 550));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -241,6 +241,9 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        Inicio v = new Inicio();
+        this.setVisible(false);
+        v.setVisible(true); 
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel10MouseClicked
 
