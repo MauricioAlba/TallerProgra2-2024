@@ -5,7 +5,6 @@
 package main;
 import javax.swing.table.DefaultTableModel;
 import Mysql.Mysql;
-import Mysql.Mysql;
 import java.sql.Array.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

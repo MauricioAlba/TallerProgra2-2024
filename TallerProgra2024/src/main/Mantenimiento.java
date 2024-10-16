@@ -236,7 +236,7 @@ FondoPanel fondo = new FondoPanel();
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
-class FondoPanel extends JPanel
+class FondoPanelMantenimiento extends JPanel
     {
         private Image imagen;
         
