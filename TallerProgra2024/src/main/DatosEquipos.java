@@ -4,8 +4,7 @@
  */
 package main;
 import javax.swing.table.DefaultTableModel;
-import dba.Mysql;
-import dba.Mysql;
+import Mysql.Mysql;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.sql.Array.*;
@@ -449,7 +448,7 @@ void Deshabilitar(){
     private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
 }
-class FondoPanel extends JPanel
+class FondoPanelMantenimiento extends JPanel
     {
         private Image imagen;
         
