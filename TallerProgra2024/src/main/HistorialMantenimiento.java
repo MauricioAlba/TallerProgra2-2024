@@ -4,8 +4,7 @@
  */
 package main;
 import javax.swing.table.DefaultTableModel;
-import dba.Mysql;
-import dba.Mysql;
+import Mysql.Mysql;
 import java.sql.Array.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -200,7 +199,7 @@ public class HistorialMantenimiento extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
-class FondoPanel extends JPanel
+class FondoPanelHistorial extends JPanel
     {
         private Image imagen;
         

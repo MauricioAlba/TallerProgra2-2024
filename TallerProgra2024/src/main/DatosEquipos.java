@@ -4,8 +4,7 @@
  */
 package main;
 import javax.swing.table.DefaultTableModel;
-import dba.Mysql;
-import dba.Mysql;
+import Mysql.Mysql;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.sql.Array.*;
