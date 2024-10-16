@@ -27,7 +27,7 @@ public class Mysql {
         
         try {
             Class.forName("org.gjt.mm.mysql.Driver");
-            link = DriverManager.getConnection("jdbc:mysql://LocalHost:3307/datosdeprogra", "root", "");
+            link = DriverManager.getConnection("jdbc:mysql://LocalHost:3306/datosdeprogra", "root", "");
         } catch (SQLException e) {
             System.out.println("Error: " + e.getMessage());   
         } catch (Exception e) {
