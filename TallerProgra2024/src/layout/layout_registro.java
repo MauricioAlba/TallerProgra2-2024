@@ -74,11 +74,6 @@ public class layout_registro extends javax.swing.JFrame {
 
         jLabel2.setText("Nombre: ");
 
-        jtfIdRoom.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtfIdRoomActionPerformed(evt);
-            }
-        });
         jtfIdRoom.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jtfIdRoomKeyPressed(evt);
@@ -280,10 +275,6 @@ public class layout_registro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfNameActionPerformed
 
-    private void jtfIdRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfIdRoomActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfIdRoomActionPerformed
-
     private void jbtnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnModificarActionPerformed
         // TODO add your handling code here:
         Modificar();
@@ -291,7 +282,7 @@ public class layout_registro extends javax.swing.JFrame {
 
     private void jbtnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnBuscarActionPerformed
         // TODO add your handling code here:
-        Buscar();
+        Buscar(jtfIdRoom.getText());
     }//GEN-LAST:event_jbtnBuscarActionPerformed
 
     private void jbtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCancelarActionPerformed
@@ -384,13 +375,18 @@ public class layout_registro extends javax.swing.JFrame {
                 Limpiar();
             }else if(!jtfName.getText().isBlank() && !jtfCapacidad.getText().isBlank()){
                 jtfName.requestFocusInWindow();
-            }else {
-            Buscar();
+            }else{
+            Buscar(jtfIdRoom.getText());
             }
         }
         if(evt.getKeyCode() == KeyEvent.VK_DOWN){
             jtfName.requestFocusInWindow();
             }
+        if(jtfIdRoom.getText().isBlank()){
+            if(evt.getKeyCode() == KeyEvent.VK_DELETE){
+                Limpiar();
+            }
+        }
     }//GEN-LAST:event_jtfIdRoomKeyPressed
 
     /**
@@ -540,11 +536,12 @@ public class layout_registro extends javax.swing.JFrame {
         Limpiar();
    }
    
-   private void Buscar(){
-   if(jtfIdRoom.getText().isBlank()){
+   private void Buscar(String s){
+   if(s.isBlank()){
             JOptionPane.showConfirmDialog(rootPane, "Introduzca un Id");
         }else{
-            String id = jtfIdRoom.getText();
+            String id = s;
+            jtfIdRoom.setText(s);
             PreparedStatement statement = null;
             ResultSet resultSet = null;
             
