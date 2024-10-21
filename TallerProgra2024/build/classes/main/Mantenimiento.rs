@@ -1,2 +1,0 @@
-main.FondoPanel
-main.Mantenimiento
